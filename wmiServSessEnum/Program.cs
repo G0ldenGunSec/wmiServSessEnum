@@ -217,6 +217,11 @@ namespace wmiServSessEnum
                     return;
                 }
             }
+            catch (Exception e)
+            {
+                Console.WriteLine($"[-]Error - undefined error on the following host: {target} errorID: {e.Message}");
+                return;
+            }
             Session.Close();
         }
 
